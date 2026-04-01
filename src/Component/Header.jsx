@@ -1,6 +1,6 @@
 import React from 'react'
 import { SlBasket } from "react-icons/sl";
-import { CiHeart } from "react-icons/ci";
+import { CiHeart,CiMenuBurger } from "react-icons/ci";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 function Header() {
     return (
@@ -9,7 +9,7 @@ function Header() {
             <div className='max-w-[1200px] mx-auto py-5'>
                 <div className="flex justify-between   items-center">
                     <img src="/logo.png"  className="object-cover" alt="" />
-                    <ul className='flex gap-3 text-lg'> 
+                    <ul className='hidden md:flex  justify-center gap-6 text-lg'> 
                         <li>Home</li>
                         <li>
                             Shop
@@ -20,11 +20,12 @@ function Header() {
                         </li>
                         <li>Contact</li>
                     </ul>
+                
                     <div className="flex gap-3  text-xl">
                         <HiMagnifyingGlass />
                         <CiHeart />
-                                <SlBasket />
-                                
+                                <SlBasket  />
+                                    <CiMenuBurger className='flex md:hidden ' />
                     </div>
             
                 </div>
